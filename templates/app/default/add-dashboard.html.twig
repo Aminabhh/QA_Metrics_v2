@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}index!{% endblock %}
+
+
+{% block pageHeaderTitle %}
+    <h4>My Add Dashboard Page</h4>
+    <span>sub text here</span>
+{% endblock %}
+
+
+
+{% block body %}
+    <div class="col-lg-12">
+        <!-- Default card start -->
+        <div class="card">
+            <div class="card-block">
+                <span>
+                  Horizontal Fixed layout is useful for those users who wants header menu options on top.
+                </span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5>JS Option</h5>
+
+            </div>
+            <div class="card-block">
+                <span>To use Compact Menu for your project add
+                  <code><strong>themelayout: 'horizontal', FixedNavbarPosition: true, FixedHeaderPosition: false,</strong></code>
+                  class in js.</span>
+            </div>
+        </div>
+
+        <!-- Default card end -->
+    </div>
+{% endblock %}
