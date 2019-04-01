@@ -12,7 +12,7 @@ class DefaultController extends AbstractController
      */
     public function index()
     {
-        return $this->render('app/default/projects.html.twig');
+        return $this->render('app/default/projectspj.html.twig');
     }
 
     /**
