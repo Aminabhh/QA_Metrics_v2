@@ -15,12 +15,109 @@
         <!-- Default card start -->
         <div class="card">
             <div class="card-block">
-                <button class="btn btn-mat btn-primary ">Create Project</button>
+                <button class="btn btn-mat btn btn-primary" data-toggle="modal" data-target="#large-Modal">Create Project</button>
                 <button class="btn btn-mat btn btn-warning">Edit Project</button>
-
+                <button class="btn btn-mat btn btn-success">Import Project</button>
             </div>
         </div>
+        <!-- Modal large-->
+        <!-- Modal -->
+        <div class="modal fade" id="large-Modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Create new project</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
 
+
+                        <form id="main" method="post" action="#" novalidate>
+                            <div class="modal-body">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Project's name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
+                                    <span class="messages"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Project's Testlink ID</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" id="password" name="password" placeholder="Testlink ID">
+                                    <span class="messages"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Project's Mantis ID</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" id="repeat-password" name="repeat-password" placeholder="Mantis ID">
+                                    <span class="messages"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Choose visibility</label>
+                                <div class="col-sm-10">
+                                    <select name="select" class="form-control">
+                                        <option value="opt1">Select One Value Only</option>
+                                        <option value="opt2">Read only</option>
+                                        <option value="opt3">Read -- Write</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Project's description</label>
+                                <div class="col-sm-10">
+                                    <textarea rows="5" cols="5" class="form-control" placeholder="Description"></textarea>
+                                </div>
+                            </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2">Project's status</label>
+                                    <div class="col-sm-10">
+                                        <div class="checkbox-fade fade-in-primary">
+                                            <label>
+                                                <input type="checkbox" id="checkbox" name="status" value="open">
+                                                <span class="cr">
+                                                    <i class="cr-icon icofont icofont-ui-check txt-primary"></i>
+                                                </span>
+                                                <span>Open</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-fade fade-in-primary">
+                                            <label>
+                                                <input type="checkbox" id="checkbox2" name="status" value="progress">
+                                                <span class="cr">
+                                                    <i class="cr-icon icofont icofont-ui-check txt-primary"></i>
+                                                </span>
+                                                <span>Progress</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-fade fade-in-primary">
+                                            <label>
+                                                <input type="checkbox" id="checkbox3" name="status" value="closed">
+                                                <span class="cr">
+                                                    <i class="cr-icon icofont icofont-ui-check txt-primary"></i>
+                                                </span>
+                                                <span>Closed</span>
+                                            </label>
+                                        </div>
+                                        <span class="messages"></span>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger waves-effect " data-dismiss="modal">Close</button>
+                                    <button type="reset" class="btn btn-default waves-effect ">Reset</button>
+                                    <button type="submit" class="btn btn-success waves-effect  "data-dismiss="modal" >Save Project</button>
+
+                                </div>
+                            </div>
+
+                        </form>
+                </div>
+            </div>
+        </div>
         <div class="card">
             <div class="card-block">
                 <div class="col-lg-12">
@@ -117,4 +214,7 @@
 
         <!-- Default card end -->
     </div>
+{% endblock %}
+{% block javascripts %}
+
 {% endblock %}
