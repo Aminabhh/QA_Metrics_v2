@@ -16,20 +16,59 @@
         <div class="card">
             <div class="card-block">
                 <span>
-                  Horizontal Fixed layout is useful for those users who wants header menu options on top.
+                    <a href ="{{ '/register/' }}">
+                <button class="btn btn-outline-primary">add User</button>
+                    </a>
                 </span>
             </div>
         </div>
 
         <div class="card">
             <div class="card-header">
-                <h5>JS Option</h5>
-
+                <h5>Team members</h5>
             </div>
             <div class="card-block">
-                <span>To use Compact Menu for your project add
-                  <code><strong>themelayout: 'horizontal', FixedNavbarPosition: true, FixedHeaderPosition: false,</strong></code>
-                  class in js.</span>
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Team members</h5>
+                    </div>
+                    <div class="card-block table-border-style">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+
+                                <tr>
+                                    <th>Id</th>
+                                    <th>UserName</th>
+                                    <th>Email</th>
+                                    <th>First Name</th>
+                                    <th>LastName</th>
+                                    <th>Role</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for user in users %}
+                                <tr>
+                                    <th scope="row">{{ user.id }}</th>
+                                    <td>{{ user.username }}</td>
+                                    <td>{{ user.email }}</td>
+                                    <td>{{ user.FirstName }}</td>
+                                    <td>{{ user.LastName }}</td>
+                                    <td></td>
+                                    <td><a href="users/edit/{{ user.id }}"><button class="btn btn-outline-primary">Edit User</button></a></td>
+                                    <td><a href="users/delete/{{ user.id }}"><button class ="btn btn-outline-danger" >Delete User</button></a></td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
 

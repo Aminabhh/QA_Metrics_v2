@@ -1,12 +1,16 @@
 <?php
 
 namespace App\Controller\App;
+use App\Entity\User;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
+
+
+
     /**
      * @Route("/", name="home_page")
      */
@@ -14,6 +18,7 @@ class DefaultController extends AbstractController
     {
         return $this->render('app/default/index.html.twig');
     }
+
 
     /**
      * @Route("/dashboard", name="dashboard")
@@ -38,4 +43,6 @@ class DefaultController extends AbstractController
     {
         return $this->render('app/default/team.html.twig');
     }
+
 }
+
