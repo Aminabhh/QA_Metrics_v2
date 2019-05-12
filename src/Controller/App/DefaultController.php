@@ -30,14 +30,6 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("/add-dashboard", name="add-dashboard")
-     */
-    public function addDashboard()
-    {
-        return $this->render('app/default/add-dashboard.html.twig');
-    }
-
-    /**
      * @Route("/team", name="team")
      */
     public function team()

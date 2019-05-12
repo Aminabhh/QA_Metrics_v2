@@ -40,6 +40,7 @@
                                         <h3 class="text-center txt-primary">Add another User</h3>
                                     </div>
                                 </div>
+
                                 <div class="form-group form-primary">
                                     {{ form_widget(form.FirstName, { 'attr': {'class': 'form-control', 'placeholder': 'FirstName'|trans } }) }}
                                     {{ form_errors(form.FirstName) }}
@@ -71,7 +72,10 @@
                                     <div class="col-sm-6">
                                         <div class="form-group form-primary">
                                             {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'form-control', 'placeholder': 'form.password_confirmation'|trans } }) }}
+
                                             {{ form_errors(form.plainPassword.second) }}
+
+
                                             <span class="form-bar"></span>
                                         </div>
                                     </div>
