@@ -23,8 +23,7 @@ class ProjectFormType extends AbstractType{
         $builder
             ->add('name' ,TextType::class)
             ->add('description',TextareaType::class)
-            ->add('id_testlink',NumberType::class)
-            ->add('id_mantis',NumberType::class)
+
         ;
     }
 }
