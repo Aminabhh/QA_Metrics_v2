@@ -76,7 +76,7 @@ class Project
         return $this;
     }
 
-    public function getDateCreated(): ?\DateTimeInterface
+    public function getDate_Created(): ?\DateTimeInterface
     {
         return $this->Date_Created;
     }

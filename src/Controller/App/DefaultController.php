@@ -26,7 +26,10 @@ class DefaultController extends AbstractController
      */
     public function dashboard()
     {
-        return $this->render('app/default/dashboard.html.twig');
+        $data = [12, 19, 3, 5, 2, 3];
+
+
+        return $this->render('app/default/dashboard.html.twig',array('data' => $data));
     }
 
     /**

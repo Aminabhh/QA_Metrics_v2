@@ -97,7 +97,15 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-
+                                    {% for project in projects %}
+                                        <tr>
+                                            <th scope="row">{{ project.id }}</th>
+                                            <td>{{ project.name }}</td>
+                                            <td>{{ project.description }}</td>
+                                            <td>{{ project.Date_created |date("Y/m/d")}}</td>
+                                            <td></td>
+                                        </tr>
+                                    {% endfor %}
 
                                     </tbody>
                                 </table>

@@ -26,9 +26,21 @@ class ProjectController extends AbstractController
      * @Route("/project",name="projects")
      *
      */
-
-    public function new(EntityManagerInterface $em, Request $request)
+   /* public function list(ProjectRepository $projectRepo)
     {
+        $projects = $projectRepo->findAll();
+        return $this->render('app/default/projects.html.twig', [
+            'projects' => $projects,
+        ]);
+        dumb($projects);
+    }*/
+
+
+    public function new(EntityManagerInterface $em, Request $request, ProjectRepository $projectRepo)
+    {
+        $projects = $projectRepo->findAll();
+       /* dump($projects);
+        exit();*/
         $form = $this->createForm(ProjectFormType::class);
 
         $form->handleRequest($request);
@@ -55,7 +67,8 @@ class ProjectController extends AbstractController
         }
 
         return $this->render('app/default/projects.html.twig', [
-            'projectForm' => $form->createView()
+            'projectForm' => $form->createView(),
+            'projects' => $projects
         ]);
     }
 
