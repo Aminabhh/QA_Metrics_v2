@@ -55,6 +55,7 @@ class ProjectController extends AbstractController
                 $project->setDescription($data['description']);
                 $project->setCreator($this->getUser());
                 $project->setDateCreated(new \DateTime('now'));
+                $project->setStatus($data['status']);
 
                 $em->persist($project);
                 $em->flush();

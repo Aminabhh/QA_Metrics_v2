@@ -47,6 +47,11 @@ class Project
      */
     private $Creator;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Status;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +125,18 @@ class Project
     public function setCreator(?User $Creator): self
     {
         $this->Creator = $Creator;
+
+        return $this;
+    }
+
+    public function getStatus(): ?string
+    {
+        return $this->Status;
+    }
+
+    public function setStatus(string $Status): self
+    {
+        $this->Status = $Status;
 
         return $this;
     }

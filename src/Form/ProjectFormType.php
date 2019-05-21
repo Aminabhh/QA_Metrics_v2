@@ -8,10 +8,12 @@
 namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
+
 
 
 
@@ -22,6 +24,9 @@ class ProjectFormType extends AbstractType{
     {
         $builder
             ->add('name' ,TextType::class)
+            ->add('status' , ChoiceType::class, array( 'multiple'=>false,
+                'expanded'=>false,
+    'choices' => array('Open' => 'open', 'Pending' => 'pending','Closed' =>'closed','Progress' =>'progress' )))
             ->add('description',TextareaType::class)
 
         ;

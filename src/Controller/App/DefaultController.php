@@ -22,7 +22,7 @@ class DefaultController extends AbstractController
 
 
     /**
-     * @Route("/dashboard", name="dashboard")
+     * @Route("/dashboard{id}", name="dashboardproject")
      */
     public function dashboard()
     {
@@ -30,6 +30,13 @@ class DefaultController extends AbstractController
 
 
         return $this->render('app/default/dashboard.html.twig',array('data' => $data));
+    }
+    /**
+     * @Route("/dashboard", name="dashboard")
+     */
+    public function dash()
+    {
+        return $this->render('app/default/dashboard.html.twig');
     }
 
     /**
