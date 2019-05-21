@@ -55,8 +55,8 @@
                                     <td>{{ user.FirstName }}</td>
                                     <td>{{ user.LastName }}</td>
                                     <td></td>
-                                    <td><a href="users/edit/{{ user.id }}"><button class="btn btn-outline-primary">Edit User</button></a></td>
-                                    <td><a href="users/delete/{{ user.id }}"><button class ="btn btn-outline-danger" >Delete User</button></a></td>
+                                    <td><a href=><button class="btn btn-outline-primary">Edit User</button></a></td>
+                                    <td><a href="{{  path ('delete_user',{ 'id': user.id })}}"><button class ="btn btn-outline-danger" >Delete User</button></a></td>
                                 </tr>
                                 {% endfor %}
                                 </tbody>

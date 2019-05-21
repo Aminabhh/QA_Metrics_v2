@@ -3288,7 +3288,9 @@ table.matrics-table tr:first-child td {
 }
 
 a[data-lightbox="example-set"] .img-fluid, a[data-lightbox="roadtrip"] .img-fluid, a[data-toggle="lightbox"] .img-fluid {
-    margin: 10px 0
+    margin: 10px 0;
+
+
 }
 
 .post-new-footer {

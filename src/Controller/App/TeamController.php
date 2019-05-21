@@ -9,11 +9,14 @@ namespace App\Controller\App;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\UserRepository;
+use App\Entity\User;
 
 
 
 
-class TeamController extends AbstractController {
+
+class TeamController extends AbstractController
+{
 
     /**
      * @Route("/team", name="team")
@@ -27,4 +30,20 @@ class TeamController extends AbstractController {
             'users' => $users,
         ]);
     }
+    /**
+     * @Route("/delete_user{id}", name="delete_user")
+     */
+
+        public function deleteUser($id)
+    {
+
+        $user = $this->getDoctrine()->getRepository(User::class)->find($id);
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($user);
+        $em->flush();
+        return $this->redirectToRoute('team');
+
+
+    }
+
 }
